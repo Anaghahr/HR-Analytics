@@ -4,7 +4,7 @@ server <- function(input, output) {
   
   hr <- reactive({
     rf <- readRDS("rf.rds")
-    vector <- readRDS("hr_test.rds")
+    vector <- readRDS("data.rds")
     dept <- switch(input$dept,"1" = "Sales & Marketing","2"= "Operations","3" ="Technology","4"="Analytics","5"="R&D","6"="Procurement","7"="Finance","8"="HR","9"="Legal")
     reg <- switch(input$reg,"1"="region_1","2"="region_2","3"="region_3","4"="region_4","5" ="region_5",
                   "6"="region_6","7"="region_7","8"="region_8","9"="region_9","10"="region_10",
